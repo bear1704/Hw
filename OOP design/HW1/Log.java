@@ -2,8 +2,8 @@ package new_pos;
 
 
 //
-//20133222 ¹Ú¼öÂù
-//Æ÷½º±âÀÇ Log ±â·ÏÀ» ´ã´çÇÕ´Ï´Ù
+//20133222 ë°•ìˆ˜ì°¬
+//í¬ìŠ¤ê¸°ì˜ Log ê¸°ë¡ì„ ë‹´ë‹¹í•©ë‹ˆë‹¤
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -15,12 +15,12 @@ public class Log implements Serializable{
 	
 	
 	public void welcome(Worker w){
-		System.out.println("---------·Î±× ¿­¶÷ ±â´ÉÀÔ´Ï´Ù.-----");
+		System.out.println("---------ë¡œê·¸ ì—´ëŒ ê¸°ëŠ¥ì…ë‹ˆë‹¤.-----");
 		
 		if(w.getAdmin()){
 		showLog();}
 		else{
-			System.out.println("±ÇÇÑÀÌ ¾ø½À´Ï´Ù!!");
+			System.out.println("ê¶Œí•œì´ ì—†ìŠµë‹ˆë‹¤!!");
 			sc.nextLine();
 		}
 	}
@@ -33,7 +33,7 @@ public class Log implements Serializable{
 	public void showLog(){
 		
 		if(log.size() >= 1){
-		System.out.println("ÇöÀç±îÁö ±â·ÏµÈ ·Î±×");
+		System.out.println("í˜„ì¬ê¹Œì§€ ê¸°ë¡ëœ ë¡œê·¸");
 		
 		for(String a:log){
 			System.out.println("["+ log.indexOf(a) + ". " + a + "]");
@@ -41,7 +41,7 @@ public class Log implements Serializable{
 		sc.nextLine();
 		
 		}else{
-			System.out.println("ÀúÀåµÈ ·Î±×°¡ ¾ø½À´Ï´Ù");
+			System.out.println("ì €ì¥ëœ ë¡œê·¸ê°€ ì—†ìŠµë‹ˆë‹¤");
 			sc.nextLine();
 		}
 	}
