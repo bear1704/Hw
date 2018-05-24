@@ -2,8 +2,8 @@ package new_pos;
 
 import java.io.Serializable;
 //
-//20133222 ¹Ú¼öÂù
-// POS±âÀÇ Çö±İÀ» ´Ù·ç´Â Å¬·¡½ºÀÔ´Ï´Ù
+//20133222 ë°•ìˆ˜ì°¬
+// POSê¸°ì˜ í˜„ê¸ˆì„ ë‹¤ë£¨ëŠ” í´ë˜ìŠ¤ì…ë‹ˆë‹¤
 
 public class Cash implements Serializable{
 
@@ -13,7 +13,7 @@ public class Cash implements Serializable{
 	public void print_imcome(){
 		
 		System.out.println("== -- == -- == -- == -- == -- == -- == -- == -- == --");
-		System.out.println("Çö±İ ¼öÀÔ : " + cash );
+		System.out.println("í˜„ê¸ˆ ìˆ˜ì… : " + cash );
 		System.out.println("== -- == -- == -- == -- == -- == -- == -- == -- == --");
 		
 	
