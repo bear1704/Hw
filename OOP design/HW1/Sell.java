@@ -1,10 +1,10 @@
 package new_pos;
 
 //
-//20133222 ¹Ú¼öÂù
+//20133222 ë°•ìˆ˜ì°¬
 //
-//¼³¸í : ¹°°ÇÀ» ÆÇ¸ÅÇÏ´Â ±â´ÉÀÔ´Ï´Ù. ¹ÙÄÚµå È¤Àº »óÇ°ÀÌ¸§À» ÀÔ·ÂÇØ¼­ ÆÇ¸ÅÇÑ µÚ, Àç°íÀÇ °¹¼ö¸¦ ±ğ°í ¼öÀÔ¸¸Å­ÀÇ Çö±İÀ» cash °´Ã¼¿¡ Ãß°¡ÇÕ´Ï´Ù.
-//     Arraylist cart´Â °áÁ¦¸¦ ¸ğ¾Æ¼­ ÇÒ ¶§ÀÇ Àå¹Ù±¸´Ï °³³äÀÔ´Ï´Ù. ÆÇ¸ÅÈ®Á¤À» ÇÏ¸é ºñ¿öÁı´Ï´Ù(clear())
+//ì„¤ëª… : ë¬¼ê±´ì„ íŒë§¤í•˜ëŠ” ê¸°ëŠ¥ì…ë‹ˆë‹¤. ë°”ì½”ë“œ í˜¹ì€ ìƒí’ˆì´ë¦„ì„ ì…ë ¥í•´ì„œ íŒë§¤í•œ ë’¤, ì¬ê³ ì˜ ê°¯ìˆ˜ë¥¼ ê¹ê³  ìˆ˜ì…ë§Œí¼ì˜ í˜„ê¸ˆì„ cash ê°ì²´ì— ì¶”ê°€í•©ë‹ˆë‹¤.
+//     Arraylist cartëŠ” ê²°ì œë¥¼ ëª¨ì•„ì„œ í•  ë•Œì˜ ì¥ë°”êµ¬ë‹ˆ ê°œë…ì…ë‹ˆë‹¤. íŒë§¤í™•ì •ì„ í•˜ë©´ ë¹„ì›Œì§‘ë‹ˆë‹¤(clear())
 
 import java.io.Serializable;
 import java.text.SimpleDateFormat;
@@ -39,8 +39,8 @@ public class Sell implements Serializable{
 	public int select(ArrayList<Product> p,Cash cash,Log l){
 		boolean match = false;
 		
-		System.out.println("»óÇ° ÆÇ¸Å ÆäÀÌÁöÀÔ´Ï´Ù. ¿øÇÏ½Ã´Â »óÇ°¸í È¤Àº ¹ÙÄÚµå¸¦ ÀÔ·ÂÇØ ÁÖ¼¼¿ä.\n ÆÇ¸ÅÇÏ½Ã·Á¸é 'ÆÇ¸Å'¸¦ ÀÔ·ÂÇØ ÁÖ¼¼¿ä\n Á¾·áÇÏ½Ã·Á¸é 'Á¾·á'¸¦ ÀÔ·ÂÇØ ÁÖ¼¼¿ä");
-		System.out.print("ÀÔ·Â : ");
+		System.out.println("ìƒí’ˆ íŒë§¤ í˜ì´ì§€ì…ë‹ˆë‹¤. ì›í•˜ì‹œëŠ” ìƒí’ˆëª… í˜¹ì€ ë°”ì½”ë“œë¥¼ ì…ë ¥í•´ ì£¼ì„¸ìš”.\n íŒë§¤í•˜ì‹œë ¤ë©´ 'íŒë§¤'ë¥¼ ì…ë ¥í•´ ì£¼ì„¸ìš”\n ì¢…ë£Œí•˜ì‹œë ¤ë©´ 'ì¢…ë£Œ'ë¥¼ ì…ë ¥í•´ ì£¼ì„¸ìš”");
+		System.out.print("ì…ë ¥ : ");
 		String str = sc.nextLine();
 		
 		try{
@@ -48,31 +48,31 @@ public class Sell implements Serializable{
 		
 		for(Product a:p){
 				if(a.getBarCode() == searchCode){
-					System.out.println(a.getName() + " / " + a.getPrice() +  "¿ø"); // Ä«Æ® Ãß°¡
+					System.out.println(a.getName() + " / " + a.getPrice() +  "ì›"); // ì¹´íŠ¸ ì¶”ê°€
 					cart.add(a);
 					match = true;
 				}
 		}
-					if(match == false){System.out.println("ÇØ´çÇÏ´Â »óÇ°ÀÌ ¾ø½À´Ï´Ù ");}
+					if(match == false){System.out.println("í•´ë‹¹í•˜ëŠ” ìƒí’ˆì´ ì—†ìŠµë‹ˆë‹¤ ");}
 					sc.nextLine();
 		
 		  }catch(NumberFormatException e){
 			  
 			  for(Product a:p){
 			   if(a.getName().equals(str)){
-					  System.out.println(a.getName() + " / " + a.getPrice() +  "¿ø  Ãß°¡µÊ" ); 
+					  System.out.println(a.getName() + " / " + a.getPrice() +  "ì›  ì¶”ê°€ë¨" ); 
 						cart.add(a);
 						match = true;
 				  }
 					  
-			  }if(str.equals("Á¾·á")){
+			  }if(str.equals("ì¢…ë£Œ")){
 					cart.clear();
 				 return 0;
 			  }
-			  else if(str.equals("ÆÇ¸Å")){ 
+			  else if(str.equals("íŒë§¤")){ 
 				  sellCart(p,cash,l);
 			  }
-			  else if(match == false){System.out.println("ÇØ´çÇÏ´Â »óÇ°ÀÌ ¾ø½À´Ï´Ù ");}
+			  else if(match == false){System.out.println("í•´ë‹¹í•˜ëŠ” ìƒí’ˆì´ ì—†ìŠµë‹ˆë‹¤ ");}
 			//	sc.nextLine();
 			  	
 			  
@@ -89,24 +89,24 @@ public class Sell implements Serializable{
 		
 		
 		for(Product temp:cart){
-			  System.out.println("¹°Ç°¸í  : " + temp.getName() + "°¡°İ : " + temp.getPrice());
+			  System.out.println("ë¬¼í’ˆëª…  : " + temp.getName() + "ê°€ê²© : " + temp.getPrice());
 			  
 			  if(temp.getAmount() - 1 >= 0){
 			  cash.setCash(temp.getPrice());
 			  temp.setAmount(temp.getAmount() - 1);
 			 
 			  }
-			  else{System.out.println(temp.getName() + " ÀÇ Àç°í°¡ ¾ø½À´Ï´Ù! ");	}
+			  else{System.out.println(temp.getName() + " ì˜ ì¬ê³ ê°€ ì—†ìŠµë‹ˆë‹¤! ");	}
 				  	
 			  
 				Calendar cal = Calendar.getInstance();
-				SimpleDateFormat sdf = new SimpleDateFormat("ddÀÏHH½ÃmmºĞ");
+				SimpleDateFormat sdf = new SimpleDateFormat("ddì¼HHì‹œmmë¶„");
 				String date = sdf.format(cal.getTime());
-			  l.setLog(date + " " + temp.getName() + "ÀÌ ÆÇ¸ÅµÊ  / °¡°İ : " + temp.getPrice());
+			  l.setLog(date + " " + temp.getName() + "ì´ íŒë§¤ë¨  / ê°€ê²© : " + temp.getPrice());
 			  
 		  }
 		
-		System.out.println("---- ÆÇ¸ÅµÇ¾ú½À´Ï´Ù. ----" + " ÇöÀç ÀÜ¾× : " + cash.getCash() + "¿ø");
+		System.out.println("---- íŒë§¤ë˜ì—ˆìŠµë‹ˆë‹¤. ----" + " í˜„ì¬ ì”ì•¡ : " + cash.getCash() + "ì›");
 		cart.clear();
 
 	}
