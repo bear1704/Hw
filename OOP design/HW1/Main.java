@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 //
-// 20133222 ¹Ú¼öÂù
+// 20133222 ë°•ìˆ˜ì°¬
 //
 
 public class Main {
@@ -34,7 +34,7 @@ public class Main {
 		
 	}
 
-	public void init(){  //¼³¸í : ÇÁ·Î±×·¥ÀÌ ½ÇÇàµÇ¸é °¡Àå ¸ÕÀú ½ÇÇàµÇ´Â ¸Ş¼ÒµåÀÔ´Ï´Ù. ¸¸¾à ÀúÀåµÈ µ¥ÀÌÅÍ°¡ ÀÖ´Ù¸é °´Ã¼µéÀ» ±× µ¥ÀÌÅÍ¿¡ ¸ÂÃç ÃÊ±âÈ­½ÃÅ°°í, ¾øÀ¸¸é »õ·Î ¸¸µì´Ï´Ù.
+	public void init(){  //ì„¤ëª… : í”„ë¡œê·¸ë¨ì´ ì‹¤í–‰ë˜ë©´ ê°€ì¥ ë¨¼ì € ì‹¤í–‰ë˜ëŠ” ë©”ì†Œë“œì…ë‹ˆë‹¤. ë§Œì•½ ì €ì¥ëœ ë°ì´í„°ê°€ ìˆë‹¤ë©´ ê°ì²´ë“¤ì„ ê·¸ ë°ì´í„°ì— ë§ì¶° ì´ˆê¸°í™”ì‹œí‚¤ê³ , ì—†ìœ¼ë©´ ìƒˆë¡œ ë§Œë“­ë‹ˆë‹¤.
 		File f = new File("save.sav");
 		if(f.exists()){
 			
@@ -60,10 +60,10 @@ public class Main {
 		
 	}
 	
-	public void welcome(){  //¼³¸í : ¸ŞÀÎ È­¸é¿¡¼­ ÇÒ Çàµ¿À» °í¸¦ ¼ö ÀÖ°Ô ¾È³»¹®À» ¶ç¿ì´Â ¸Ş¼ÒµåÀÔ´Ï´Ù. ¶ÇÇÑ ÀÛ¾÷À» ¸¶Ä¡¸é ´Ù½Ã ¿©±â·Î µ¹¾Æ¿À°Ô µÇ¹Ç·Î,
-							//     µ¹¾Æ¿Ã ¶§ ¸¶´Ù µ¥ÀÌÅÍ¸¦ ÀúÀåÇØ¼­ º¸°üÇÒ ¼ö ÀÖ°Ô ÇÕ´Ï´Ù.
+	public void welcome(){  //ì„¤ëª… : ë©”ì¸ í™”ë©´ì—ì„œ í•  í–‰ë™ì„ ê³ ë¥¼ ìˆ˜ ìˆê²Œ ì•ˆë‚´ë¬¸ì„ ë„ìš°ëŠ” ë©”ì†Œë“œì…ë‹ˆë‹¤. ë˜í•œ ì‘ì—…ì„ ë§ˆì¹˜ë©´ ë‹¤ì‹œ ì—¬ê¸°ë¡œ ëŒì•„ì˜¤ê²Œ ë˜ë¯€ë¡œ,
+							//     ëŒì•„ì˜¬ ë•Œ ë§ˆë‹¤ ë°ì´í„°ë¥¼ ì €ì¥í•´ì„œ ë³´ê´€í•  ìˆ˜ ìˆê²Œ í•©ë‹ˆë‹¤.
 		
-		//ÀúÀå °úÁ¤
+		//ì €ì¥ ê³¼ì •
 		
 		try{
 			FileOutputStream fos = new FileOutputStream("save.sav");
@@ -85,32 +85,32 @@ public class Main {
 		System.out.println("-----------------------------------");
 		System.out.println("              POS                  ");
 		System.out.println("-----------------------------------");
-		System.out.println("ÇöÀç ±Ù¹«ÀÚ´Â " + worker.getName() + " ÀÔ´Ï´Ù. \n");
-		System.out.println("ÇöÀç ÀÜ°í :  " + cash.getCash());
-		System.out.println("[ÆÇ¸Å] ¹°Ç° ÆÇ¸Å");
-		System.out.println("[°ü¸®] Àç°í °ü¸®");
-		System.out.println("[±³´ë] ±Ù¹«ÀÚ ±³´ë");
-		System.out.println("[·Î±×] °ü¸®ÀÚ ±â´É");
-		System.out.print("ÀÔ·Â : ");
+		System.out.println("í˜„ì¬ ê·¼ë¬´ìëŠ” " + worker.getName() + " ì…ë‹ˆë‹¤. \n");
+		System.out.println("í˜„ì¬ ì”ê³  :  " + cash.getCash());
+		System.out.println("[íŒë§¤] ë¬¼í’ˆ íŒë§¤");
+		System.out.println("[ê´€ë¦¬] ì¬ê³  ê´€ë¦¬");
+		System.out.println("[êµëŒ€] ê·¼ë¬´ì êµëŒ€");
+		System.out.println("[ë¡œê·¸] ê´€ë¦¬ì ê¸°ëŠ¥");
+		System.out.print("ì…ë ¥ : ");
 		
 		String str = sc.nextLine();
 		
 		switch(str){  
-		case "±³´ë":
-			System.out.print("±³´ë¹ŞÀ» ÀÌ¸§À» ÀÔ·ÂÇØ ÁÖ¼¼¿ä : ");
+		case "êµëŒ€":
+			System.out.print("êµëŒ€ë°›ì„ ì´ë¦„ì„ ì…ë ¥í•´ ì£¼ì„¸ìš” : ");
 			input = sc.nextLine();
 			worker.setWorker(input,log);
 			welcome();
 			break;
-		case "°ü¸®":
+		case "ê´€ë¦¬":
 			iv.welcome(worker,log);
 			welcome();
 			break;
-		case "ÆÇ¸Å":
+		case "íŒë§¤":
 			sell.welcome(iv.getProduct(),cash,log);
 			welcome();
 			break;
-		case "·Î±×": 
+		case "ë¡œê·¸": 
 			log.welcome(worker);
 			welcome();
 			break;
