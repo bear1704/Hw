@@ -1,7 +1,7 @@
-# Hw
+## University Homework
 
-C++ Programming \n
-Graphics
-OOP design and analysis
-Computer Network
-Algorithm
+/C++ Programming
+/Graphics
+/OOP design and analysis
+/Computer Network
+/Algorithm
